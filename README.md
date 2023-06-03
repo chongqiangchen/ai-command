@@ -7,6 +7,14 @@
 npm install ai-command
 ```
 
+2. Config OpenAI API Key
+```
+aim set openai_key {YOUR_OPENAI_KEY}
+
+// ls config check
+aim ls
+```
+
 2. Ask Command Question in Terminal
 ```
 // Input

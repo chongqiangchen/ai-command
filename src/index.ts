@@ -11,8 +11,6 @@ async function find(inputs: string, flags: { model: string }) {
     const ChatGPT = (await import('./gpt')).default
     const chatGPT = new ChatGPT();
 
-    console.log(withFindPrompt(inputs));
-
     const reply = await chatGPT.sendOnceMessage(withFindPrompt(inputs), model);
     logMd(reply);
 }
