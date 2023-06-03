@@ -12,9 +12,9 @@
   ],
   "author": "dxiongya",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/chongqiangchen/ai-command",
   "repository": {
-    "url": ""
+    "url": "https://github.com/chongqiangchen/ai-command"
   },
   "scripts": {
     "dev": "npm run build-fast -- --watch",

@@ -7,7 +7,7 @@
 npm install ai-command
 ```
 
-2. Ask Command Question
+2. Ask Command Question in Terminal
 ```
 // Input
 aim ask "How to query port 3000, and close it"
