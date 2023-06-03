@@ -9,7 +9,8 @@ export async function main() {
   cli
     .command('ask <message>', 'Ask ai about command question')
     .option('--model <model_type>', 'Model: gpt3.5 or gpt4.0')
-    .action(async (inputs: string, flags) => {
+    .option('--no-copy', 'Disable auto copy')
+    .action(async (inputs: string, flags) => {      
       const { find } = await import('.')
       find(inputs, flags);
     })

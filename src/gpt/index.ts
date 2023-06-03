@@ -1,6 +1,8 @@
 import {ChatCompletionRequestMessage, Configuration, OpenAIApi} from 'openai'
 import path from 'path';
 import fs from "fs";
+import { error } from '../utils/log';
+import { exit } from 'process';
 
 const ConfigPath = path.resolve(__dirname, './config.json');
 
@@ -14,6 +16,12 @@ class ChatGPT {
         
         const configJson = fs.readFileSync(ConfigPath, 'utf-8');
         this.config = JSON.parse(configJson);
+        
+        if (this.config.openai_key === '' || !this.config.openai_key) {
+            error('OpenAI key not set, please run `aim set openai_key <your-key>`');
+            exit(1);
+        }
+
         const configuration = new Configuration({
             apiKey: this.config.openai_key,
         });

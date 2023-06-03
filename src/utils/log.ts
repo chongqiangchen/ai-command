@@ -55,7 +55,7 @@ function logJson(str: any) {
 }
 
 function logMd(md: any) {
-    console.log(marked(md));
+    console.log(marked(md).trimEnd());
 }
 
 export {
