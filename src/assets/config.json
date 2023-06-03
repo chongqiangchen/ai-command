@@ -1,0 +1,7 @@
+{
+    "openai_key": "",
+    "openai_chat_options": {
+        "model": "gpt-3.5-turbo",
+        "temperature": "0.2"
+    }
+}
