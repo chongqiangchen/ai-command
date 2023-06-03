@@ -16,6 +16,13 @@
   "repository": {
     "url": "https://github.com/chongqiangchen/ai-command"
   },
+  "keywords": [
+    "ai",
+    "chatgpt",
+    "openai",
+    "command",
+    "terminal"
+  ],
   "scripts": {
     "dev": "npm run build-fast -- --watch",
     "build": "tsup src/cli.ts src/index.ts --clean --splitting",
