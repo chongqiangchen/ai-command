@@ -27,6 +27,13 @@ const withFindPrompt = (message: string): ChatCompletionRequestMessage[] => {
     ]
 }
 
+const withCommonPrompt = (message: string): ChatCompletionRequestMessage[] => {
+  return [
+    {role: 'user', content: message}
+  ]
+}
+
 export {
-    withFindPrompt
+    withFindPrompt,
+    withCommonPrompt
 }

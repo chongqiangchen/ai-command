@@ -24,6 +24,11 @@ aim ask "How to query port 3000, and close it"
 lsof -i:3000 | kill -9 {PID}
 ```
 
+4. Chat with Ai in Terminal
+```
+aim chat
+```
+
 4. Auto Copy
 ```
 default open copy to clipboard, if you want to disable it, use --no-copy or global disbaled: aim set auto_copy off

@@ -58,10 +58,15 @@ function logMd(md: any) {
     console.log(marked(md).trimEnd());
 }
 
+function loadMd(md: any) {
+    return marked(md).trimEnd();
+}
+
 export {
     success,
     error,
     warn,
     logJson,
-    logMd
+    logMd,
+    loadMd
 }

@@ -11,8 +11,16 @@ export async function main() {
     .option('--model <model_type>', 'Model: gpt3.5 or gpt4.0')
     .option('--no-copy', 'Disable auto copy')
     .action(async (inputs: string, flags) => {      
-      const { find } = await import('.')
-      find(inputs, flags);
+      const { ask } = await import('.')
+      ask(inputs, flags);
+    })
+
+  cli
+    .command('chat', 'Chat with ai')
+    .option('--model <model_type>', 'Model: gpt3.5 or gpt4.0')
+    .action(async (flags) => {
+      const { chat } = await import('.')
+      chat(flags);
     })
 
   cli

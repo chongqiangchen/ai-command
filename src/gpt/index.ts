@@ -23,7 +23,7 @@ class ChatGPT {
         }
 
         const configuration = new Configuration({
-            apiKey: this.config.openai_key,
+            apiKey: this.config.openai_key || process.env.OPENAI_KEY,
         });
         this.openai = new OpenAIApi(configuration);
     }
